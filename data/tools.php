@@ -2,7 +2,7 @@
 function absolute($e,$h){
         $a = $e["episode"]; 
         $e["season"]--;
-        while($e["season"] != 0){
+        while($e["season"] > -1){
           $a += $h[$e["season"]];
           $e["season"]--;
         }
