@@ -1,0 +1,27 @@
+SHOWS CURRENTLY  SUPPORTED:
+ - American Dad (73141.php)
+ - Pawn Stars (111051.php)
+
+INSTALLATION:
+Setup a webserver capable of running php.
+cd {WEB_ROOT}
+git clone https://github.com/MercyfulFate/mercyful-beard.git
+
+modify your {SICKBEARD_ROOT}/lib/tvdb_api/tvdb_api.py file so that:
+self.config('url_base') = "http://localhost/mercyful-beard/hook.php?q="
+
+Add any conversion files in mercyful-beard/data/
+Add your shows in sickbeard.
+
+EXTENDING:
+Extending is real simple:
+in mercyful-beard/data/ there is a collection of {series_id}.php files.
+if you show is not included, you'll need:
+ - series_id
+ - the number of episodes in each season (including "specials") for both:
+    - thetvdb.com api
+    - scene
+copy the example.php file and rename it to {series_id}.php.
+modify the $tvdb and $scene arrays.
+
+should be automatically used next time sickbeard queries for that show.
