@@ -2,7 +2,10 @@
 $delta_base = "data/";
 $url = $_GET['q'];
 $tvdb_url = "http://www.thetvdb.com" . $url;
-if ( ! preg_match("(/series/)[0-9]{1,7}(/all/).{2,3}(.xml)$",$url) {
+
+#check to see if its a xml we should catch
+$regex = "#(\/series\/)\d{1,7}(\/all\/).{2,3}(.xml)$#";
+if ( ! preg_match($regex, $url) {
   header("Location: " . $url);
 }
 
