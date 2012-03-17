@@ -23,10 +23,11 @@ if (! file_exists($delta)) {
 } else  {
         include($delta);
         foreach ($xml->Episode as $ep) {
-                $number = $ep->EpisodeNumber;
-                $season = $ep->SeasonNumber;
-                $ep->EpisodeNumber = getEpisode($season, $number);
-                $ep->SeasonNumber = getSeason($season, $number);
+                $data = array("season" => $ep->SeasonNumber,
+                              "episode" => $ep->EpisodeNumber);
+                $data = convert($data);
+                $ep->EpisodeNumber = data["episode"];
+                $ep->SeasonNumber = data["season"];
         }
 }
 

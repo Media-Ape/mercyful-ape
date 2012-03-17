@@ -1,13 +1,9 @@
-<?php
+<?php include("tools.php");
 # American Dad!!!!
-function getEpisode($s,$e){
- if ($s == 2) {return $e + 7;}
- else {return $e;}
-}
 
-function getSeason($s, $e){
- if ($s == 2) {return 1;}
- else if ($s > 2) {return $s - 1;}
- else {return $s;}
+function convert($v){
+  $tvdb = array(0,7,16,19,16,20,18,19,16);
+  $scene = array(0,23,19,16,20,18,19,16);
+  return episode(absolute($v,$tvdb),$scene);
 }
 ?>
