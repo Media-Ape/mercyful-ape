@@ -12,10 +12,11 @@ function absolute($e,$h){
 function episode($a,$h){
         $eps = array("season" => 0,"episode" => 0);
         while ($a > 0){
-                $eps["season"]++;
-                if ($a <= $h[$eps["season"]]) {$eps["episode"] += $a;}
+                if ($a <= $h[$eps["season"]]) {break;}
                 $a -= $h[$eps["season"]];
-        }
+                $eps["season"]++;
+        }  
+        $eps["episode"] += $a;
         return $eps;
 }
 
