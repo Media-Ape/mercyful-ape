@@ -23,5 +23,5 @@ if (! file_exists($delta)) {
         }
 }
 
-echo $xml-asXML();
+echo $xml->asXML();
 ?>
