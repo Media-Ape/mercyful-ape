@@ -3,25 +3,25 @@ SHOWS CURRENTLY  SUPPORTED:
  - Pawn Stars (111051.php)
 
 INSTALLATION:
-Setup a webserver capable of running php.
-cd {WEB_ROOT}
-git clone https://github.com/MercyfulFate/mercyful-beard.git
+1. Setup a webserver capable of running php.
+2. cd {WEB_ROOT}
+3. git clone https://github.com/MercyfulFate/mercyful-beard.git
 
-modify your {SICKBEARD_ROOT}/lib/tvdb_api/tvdb_api.py file so that:
-self.config('url_base') = "http://localhost/mercyful-beard/hook.php?q="
+4.modify your {SICKBEARD_ROOT}/lib/tvdb_api/tvdb_api.py file so that:
+5. self.config('url_base') = "http://localhost/mercyful-beard/hook.php?q="
 
-Add any conversion files in mercyful-beard/data/
-Add your shows in sickbeard.
+6. Add any conversion files in mercyful-beard/data/
+7. Add your shows in sickbeard.
 
 EXTENDING:
 Extending is real simple:
-in mercyful-beard/data/ there is a collection of {series_id}.php files.
-if you show is not included, you'll need:
- - series_id
- - the number of episodes in each season (including "specials") for both:
-    - thetvdb.com api
-    - scene
-copy the example.php file and rename it to {series_id}.php.
-modify the $tvdb and $scene arrays.
+1. in mercyful-beard/data/ there is a collection of {series_id}.php files.
+   if you show is not included, you'll need:
+     - series_id
+     - the number of episodes in each season (including "specials") for both:
+       - thetvdb.com api
+       - scene
+2. copy the example.php file and rename it to {series_id}.php.
+3. modify the $tvdb and $scene arrays.
 
 should be automatically used next time sickbeard queries for that show.
