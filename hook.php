@@ -78,6 +78,9 @@ foreach ($xml->Episode as $i=>$xml){
   <SeasonNumber>{$season}</SeasonNumber>
   <Writer>{$xml->Writer}</Writer>
   <absolute_number>{$xml->absolute_number}</absolute_number>
+  <airsafter_season>{$xml->airsafter_season}</airsafter_season>
+  <airsbefore_episode>{$xml->airsbefore_episode}</airsbefore_episode>
+  <airsbefore_season>{$xml->airsbefore_season}</airsbefore_season>
   <filename>{$xml->filename}</filename>
   <lastupdated>{$xml->lastupdated}</lastupdated>
   <seasonid>{$xml->seasonid}</seasonid>
