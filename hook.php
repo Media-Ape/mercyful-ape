@@ -2,6 +2,10 @@
 $delta_base = "data/";
 $url = $_GET['q'];
 $tvdb_url = "http://www.thetvdb.com" . $url;
+if ( ! preg_match("(/series/)[0-9]{1,7}(/all/).{2,3}(.xml)$",$url) {
+  header("Location: " . $url);
+}
+
 $file = file_get_contents($tvdb_url);
 $xml = simplexml_load_string($file);
 

@@ -1,4 +1,5 @@
 <?php
+# American Dad!!!!
 function getEpisode($s,$e){
  if ($s == 2) {return $e + 7;}
  else {return $e;}
