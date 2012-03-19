@@ -1,8 +1,7 @@
 SHOWS CURRENTLY  SUPPORTED:
  - American Dad (73141.php)
  - Top Gear US (199051.php)
-
- - Pawn Stars (111051.php) - bugged due to mis matching scene releases.
+ - Pawn Stars (111051.php) - 2nd Season *may* be bugged
 
 INSTALLATION:
 1. Setup a webserver capable of running php.
