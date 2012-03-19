@@ -9,8 +9,11 @@ function convert($v){
 	if ($a == 1) {return array("season" => 2,"episode" => 0);}
 	if ($v["season"] == 1) {return $v;}
 
-	#season 2 is stuffed....
-	if ($v["season"] == 2 and $v["episode"] <= 31) {return $v;}
+	#season 2 my be out of sync
+	if ($v["season"] == 2 and $v["episode"] <= 31) {
+		$v["episode"] += 1;
+		return $v;
+	}
 
 	# Fix for Mile High/Patriot Games Ordering
 	if ($a == 127) {return array("season" => 4,"episode" => 54);}
