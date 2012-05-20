@@ -2,8 +2,8 @@
 # Megastructures
 
 function convert($v){
-	if ($v["series"] > 0){
-		$v["series"] = $v["series"] - 2003;
+	if ($v["season"] > 0){
+		$v["season"] = $v["season"] - 2003;
 	}
 	return $v;
 }
